@@ -2,6 +2,15 @@
 # import libaries 
 import pprint as pp
 
+from numpy import size
+
+def is_empty(untried):
+    """Implementation function for terminal condition of recursion"""
+    return len(untried) == 0
+
+def RemoveFromSet(untried):
+    pass
+
 def CountFixedPolynoes(G, untried, n, p, c):
     """
     Input :
@@ -13,6 +22,12 @@ def CountFixedPolynoes(G, untried, n, p, c):
     Output : 
     - r, the number of polynominoes of size n
     """
+    list = [] # Initialize a list 
+    while not is_empty(untried):
+        u = RemoveFromSet(untried)
+        list.append(p, u)
+        
+        pass
 
 
     return c
