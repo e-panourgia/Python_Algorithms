@@ -38,24 +38,29 @@ def fix_graph(n):
     list_border = horizontally_right + horizontally_left
     list_border_backup = []
     # produce possible solution space 
-    for i in range(len(list_border)):
+    k = n
+    m = n
+    for i in range(len(list_border)): ## all meria
         creator = list_border[i]
         if creator[1] == 0: 
-            for i in range(n): # 5 
-                list_border_backup.append((creator[0], creator[1]+i))    
+            for i in range(k): # all n first colona
+                list_border_backup.append((creator[0], creator[1]+i))
+            k -= 1    
+    
         elif creator[1] == 1:
-            for i in range(n-1):
+            for i in range(m-1):
                 if creator == (0,1):
                     continue
                 list_border_backup.append((creator[0], creator[1]+i))
+            m -= 1
     print(list_border_backup)
 
     # filter
     #create final graph 
-    list_all_nodes = list_border.copy()
+    #list_all_nodes = list_border.copy()
 
     exit()
-    return G
+    #return G
     
 
 ## Initialize parameters to call the main function 
