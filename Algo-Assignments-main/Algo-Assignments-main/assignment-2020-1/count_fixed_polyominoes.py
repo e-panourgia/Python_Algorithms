@@ -25,7 +25,8 @@ def CountFixedPolynoes(G, untried, n, p, c):
             new_untried = untried.union(new_neighbors)
             CountFixedPolynoes(G, new_untried, n, p, c) # recursion
         p.remove(u)
-    return c.counter
+    r = c.counter
+    return r
 
 def produce_nodes(n):
     """Fix graph based on the size polynominos given from terminan(cmd)"""
