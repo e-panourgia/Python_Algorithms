@@ -1,3 +1,4 @@
+# TODO order graph , implement pseudocode
 # import libaries 
 import pprint as pp
 
@@ -14,7 +15,7 @@ def CountFixedPolynoes(G, untried, n, p, c):
     """
 
 
-    pass
+    return c
 
 def produce_nodes(n):
     """Fix graph based on the size polynominos given from terminan(cmd)"""
@@ -88,9 +89,10 @@ n = 5
 list_nodes = produce_nodes(n)
 neighbours, keys = create_graph(list_nodes)
 G = create_final_graph(neighbours, keys)
+untried={(0,0)}
+p = []
+# call main function that solve the problem 
+c = CountFixedPolynoes(G, untried, n, p, c=0)
+# print final output
 pp.pp(G)
-# print(G)
-# untried={(0,0)}
-# p = []
-# # call main function that solve the problem 
-# CountFixedPolynoes(G, untried, n, p, c=0)
+print(c)
